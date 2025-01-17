@@ -1,0 +1,55 @@
+import numpy as np
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Embedding, LSTM, Dense
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+import json
+
+# Dataset
+dataset = {
+    "What is your name?": "My name is Rajesh.",
+    "Where do you live?": "I live at 20, Thiruppanazhuar Street, Srimushnam, Tamil Nadu, India.",
+    "Tell me about your family.": "I come from a loving family. My father is a farmer, my mother is a homemaker, and my sister is a physiotherapist.",
+    "What are your hobbies?": "I enjoy learning about programming, solving logical problems, and exploring new technologies.",
+    "Hello": "Hi! How can I help you?",
+    "Goodbye": "Goodbye! Have a great day!",
+    "How are you?": "I am just a bot, but I'm here to assist you!",
+    "What can you do?": "I can answer your questions, chat with you, and help you learn more about Rajesh!"
+}
+
+questions = list(dataset.keys())
+responses = list(dataset.values())
+
+# Tokenize the data
+tokenizer = Tokenizer()
+tokenizer.fit_on_texts(questions)
+sequences = tokenizer.texts_to_sequences(questions)
+max_len = max(len(seq) for seq in sequences)
+sequences = pad_sequences(sequences, maxlen=max_len, padding='post')
+vocab_size = len(tokenizer.word_index) + 1
+
+# Label encoding for responses
+response_labels = {response: idx for idx, response in enumerate(responses)}
+y = np.array([response_labels[response] for response in responses])
+
+# Build the model
+model = Sequential([
+    Embedding(input_dim=vocab_size, output_dim=64, input_length=max_len),
+    LSTM(64),
+    Dense(len(responses), activation='softmax')
+])
+
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
+# Train the model
+model.fit(sequences, y, epochs=300, verbose=1)
+
+# Save the model
+model.save("chatbot_model.h5")
+print("Model saved as chatbot_model.h5")
+
+# Save tokenizer and responses for use in frontend
+with open("tokenizer.json", "w") as f:
+    f.write(json.dumps(tokenizer.word_index))
+with open("responses.json", "w") as f:
+    f.write(json.dumps(responses))
