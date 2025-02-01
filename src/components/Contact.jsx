@@ -8,35 +8,41 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const formData = {
-      user_name: name,    // Matches placeholder in your template
-      user_email: email,  // Matches placeholder in your template
+      user_name: name,      // Matches placeholder in your template
+      user_email: email,    // Matches placeholder in your template
       user_message: message, // Matches placeholder in your template
     };
-
-    const userId = import.meta.env.VITE_EMAILJS_USER_ID;
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-
-    emailjs.send(serviceId, templateId, formData, userId)
-      .then(
-        (result) => {
-          console.log(result.text);
-          setStatus('Message sent successfully!');
-          setName('');
-          setEmail('');
-          setMessage('');
+  
+    try {
+      const response = await fetch('https://emailserver-2vim.onrender.com/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        (error) => {
-          console.log(error.text);
-          setStatus('Failed to send message');
-        }
-      );
+        body: JSON.stringify(formData),
+      });
+  
+      const result = await response.json();
+  
+      if (response.ok) {
+        console.log(result.message);
+        setStatus('Message sent successfully!');
+        setName('');
+        setEmail('');
+        setMessage('');
+      } else {
+        console.error(result.error);
+        setStatus('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setStatus('Failed to send message');
+    }
   };
-
   return (
     <section id="contact" className="p-6 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-white text-center mb-6">Contact Me</h2>
