@@ -10,6 +10,18 @@ const Header = () => {
   const closeMenu = () => {
     setMenuOpen(false);
   };
+  const navButtons = document.querySelectorAll('a');
+
+  // Add click event listener to each button
+  navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove underline from all buttons
+      navButtons.forEach(btn => btn.classList.remove('underline', 'font-bold'));
+
+      // Add underline to the clicked button
+      button.classList.add('underline', 'font-bold');
+    });
+  });
 
   return (
     <header className="p-6 bg-gradient-to-r from-indigo-600 to-blue-600 shadow-md fixed top-0 left-0 right-0 z-50">
