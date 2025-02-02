@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import Address from './components/Address';
 
 
-
 const App = () => {
   return (
     <div className="bg-gray-100 text-gray-800 font-sans">

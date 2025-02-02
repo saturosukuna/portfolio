@@ -1,24 +1,30 @@
 import React, { useRef, useEffect } from 'react';
-import { FaJsSquare, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJava, FaPython, FaGitAlt, FaDocker, FaDatabase } from 'react-icons/fa';  // Import logos from react-icons
-import { SiTailwindcss, SiMongodb, SiExpress, SiGraphql, SiEthereum,   SiBootstrap, SiFigma, SiMysql, SiOracle } from 'react-icons/si'; // More logos
+import { FaJsSquare,  FaNodeJs, FaHtml5, FaCss3Alt, FaJava,  FaDocker } from 'react-icons/fa';  // Import logos from react-icons
+import { SiTailwindcss, SiMongodb, SiExpress,  SiEthereum,   SiBootstrap, SiFigma, SiMysql, SiOracle } from 'react-icons/si'; // More logos
 
 const Skills = () => {
   const skills = [
     { name: 'JavaScript', logo: <FaJsSquare className="text-4xl text-yellow-500" /> },
-    { name: 'React', logo: <FaReact className="text-4xl text-cyan-500" /> },
+    { name: 'React', logo: <iconify-icon icon="logos:react" width="32" height="32" noobserver></iconify-icon> },
     { name: 'Node.js', logo: <FaNodeJs className="text-4xl text-green-600" /> },
     { name: 'HTML5', logo: <FaHtml5 className="text-4xl text-orange-500" /> },
     { name: 'CSS3', logo: <FaCss3Alt className="text-4xl text-blue-500" /> },
     { name: 'Java', logo: <FaJava className="text-4xl text-red-600" /> },
-    { name: 'Python', logo: <FaPython className="text-4xl text-blue-400" /> },
-    { name: 'Git', logo: <FaGitAlt className="text-4xl text-gray-800" /> },
+    { name: 'Python', logo: <iconify-icon icon="logos:python" width="32" height="32" noobserver></iconify-icon> },
+    { name: 'Git', logo: <iconify-icon icon="logos:git-icon" width="32" height="32" noobserver></iconify-icon> },
+    { name: 'Github', logo: <iconify-icon icon="logos:github-icon" width="32" height="32" noobserver></iconify-icon> },
     { name: 'Docker', logo: <FaDocker className="text-4xl text-blue-400" /> },
     { name: 'MongoDB', logo: <SiMongodb className="text-4xl text-green-600" /> },
     { name: 'Express', logo: <SiExpress className="text-4xl text-black" /> },
     { name: 'TailwindCSS', logo: <SiTailwindcss className="text-4xl text-sky-400" /> },
-    { name: 'GraphQL', logo: <SiGraphql className="text-4xl text-pink-500" /> },
+    { name: 'C++', logo: <iconify-icon icon="logos:c-plusplus" width="32" height="32" noobserver></iconify-icon> },
+    { name: 'C#', logo: <iconify-icon icon="logos:c-sharp" width="32" height="32" noobserver></iconify-icon> },
+    { name: 'Web3', logo: <iconify-icon icon="logos:web3js" width="32" height="32" noobserver></iconify-icon> },
     { name: 'Ethereum', logo: <SiEthereum className="text-4xl text-indigo-600" /> },
-    
+    { name: 'Solidity', logo: <iconify-icon icon="logos:solidity" width="32" height="32" noobserver></iconify-icon> },
+    { name: 'Metamask', logo: <iconify-icon icon="logos:metamask-icon" width="32" height="32" noobserver></iconify-icon> },
+    { name: 'Ganache', logo: <iconify-icon icon="logos:ganache-icon" width="32" height="32" noobserver></iconify-icon> },
+    { name: 'Truffle', logo: <iconify-icon icon="logos:truffle-icon" width="32" height="32" noobserver></iconify-icon> },
     { name: 'Bootstrap', logo: <SiBootstrap className="text-4xl text-purple-600" /> },
     { name: 'MySQL', logo: <SiMysql className="text-4xl text-blue-700" /> },
     { name: 'Oracle', logo: <SiOracle className="text-4xl text-red-500" /> },
