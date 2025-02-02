@@ -38,7 +38,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="p-8 bg-gray-50 rounded-lg shadow-lg">
+    <section id="projects" className="scroll-mt-20 p-8 bg-gray-50 rounded-lg shadow-lg">
       <h2 className="text-3xl font-extrabold text-green-600 text-center mb-8">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
@@ -51,6 +51,17 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      <div class="flex flex-col items-center space-y-6 p-6 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-lg">
+  
+  <div className="w-full  p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+    <h2 className="text-xl py-4 font-semibold text-gray-800 dark:text-gray-200 text-center">Flowchart For My Blockchain Project</h2>
+    <img src="/portfolio/images/uml.png" alt="Flowchart" className="w-full rounded-lg shadow-md border border-gray-300 dark:border-gray-700"/>
+  </div>
+
+</div>
+
+      
+      
     </section>
   );
 };

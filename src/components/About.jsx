@@ -3,7 +3,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section id="about" className="mt-24 md:mt-2 p-8 text-justify bg-gradient-to-r from-gray-800 to-gray-700 text-white  rounded-lg shadow-lg">
+    <section id="about" className="scroll-mt-14 mt-24 md:mt-2 p-8 text-justify bg-gradient-to-r from-gray-800 to-gray-700 text-white  rounded-lg shadow-lg">
       <h2 className="text-2xl p-6 text-indigo-600 font-bold text-center mb-4">About Me</h2>
       <p className="text-lg">
         Hello! I am Rajesh from Tamil Nadu, India, and I am passionate about technology and innovation. I am currently pursuing my Bachelor's in Information Technology at Annamalai University, set to graduate in 2025.

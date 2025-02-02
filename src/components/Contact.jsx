@@ -44,7 +44,7 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="p-6 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-lg shadow-lg">
+    <section id="contact" className="scroll-mt-20 p-6 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-white text-center mb-6">Contact Me</h2>
       <form className="space-y-6" onSubmit={handleSubmit}>
         <div>

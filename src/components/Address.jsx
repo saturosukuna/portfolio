@@ -4,7 +4,7 @@ import { FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin, FaGithub } from 'react
 
 const Address = () => {
   return (
-    <section id="address" className="p-6 bg-gray-600 border-gray-100 border-4 font-extrabold text-white font-mono my-4 rounded-lg shadow-lg">
+    <section id="address" className="scroll-mt-14 p-6 bg-gray-600 border-gray-100 border-4 font-extrabold text-white font-mono my-4 rounded-lg shadow-lg">
       {/* Address Section */}
       <h2 className="text-3xl font-bold text-white-600 text-center mb-6">Address</h2>
       <p className="text-center mb-4">

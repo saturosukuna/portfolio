@@ -50,8 +50,12 @@ const Skills = () => {
   }, []);
 
   return (
-    <section id="skills" className="mt-4 p-10 bg-indigo-800 overflow-hidden">
+    <section id="skills" className="scroll-mt-20 mt-4 p-10 bg-indigo-800 ">
       <h2 className="text-3xl text-white font-serif font-extrabold text-center mb-6">Skills</h2>
+      <p class="text-lg text-white py-2 dark:text-gray-300 font-medium leading-relaxed">
+  I have expertise in the MERN stack, blockchain development, and logical programming. With a strong foundation in MongoDB, Express, React, and Node.js, I build scalable web applications. My blockchain knowledge includes smart contract development using Solidity and Web3. My logical thinking skills enable me to write efficient and optimized code for problem-solving and software development.
+</p>
+
       <div
         ref={containerRef}
         className="relative flex overflow-x-hidden whitespace-nowrap"
