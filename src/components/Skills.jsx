@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import { FaJsSquare,  FaNodeJs, FaHtml5, FaCss3Alt, FaJava,  FaDocker } from 'react-icons/fa';  // Import logos from react-icons
-import { SiTailwindcss, SiMongodb, SiExpress,  SiEthereum,   SiBootstrap, SiFigma, SiMysql, SiOracle } from 'react-icons/si'; // More logos
+import { FaJsSquare, FaNodeJs, FaHtml5, FaCss3Alt, FaJava, FaDocker } from 'react-icons/fa';  // Import logos from react-icons
+import { SiTailwindcss, SiMongodb, SiExpress, SiEthereum, SiBootstrap, SiFigma, SiMysql, SiOracle } from 'react-icons/si'; // More logos
 
 const Skills = () => {
   const skills = [
@@ -29,6 +29,7 @@ const Skills = () => {
     { name: 'MySQL', logo: <SiMysql className="text-4xl text-blue-700" /> },
     { name: 'Oracle', logo: <SiOracle className="text-4xl text-red-500" /> },
     { name: 'Figma', logo: <SiFigma className="text-4xl text-purple-500" /> },
+    { name: 'Flutter', logo: <iconify-icon icon="logos:flutter" width="32" height="32" noobserver></iconify-icon> },
   ];
 
   const containerRef = useRef(null);
@@ -59,8 +60,19 @@ const Skills = () => {
     <section id="skills" className="scroll-mt-20 mt-4 p-10 bg-indigo-800 ">
       <h2 className="text-3xl text-white font-serif font-extrabold text-center mb-6">Skills</h2>
       <p class="text-lg text-white py-2 dark:text-gray-300 font-medium leading-relaxed">
-  I have expertise in the MERN stack, blockchain development, and logical programming. With a strong foundation in MongoDB, Express, React, and Node.js, I build scalable web applications. My blockchain knowledge includes smart contract development using Solidity and Web3. My logical thinking skills enable me to write efficient and optimized code for problem-solving and software development.
-</p>
+        I have expertise in the MERN stack, blockchain development, and logical programming. With a strong foundation in MongoDB, Express, React, and Node.js, I build scalable web applications. My blockchain knowledge includes smart contract development using Solidity and Web3. My logical thinking skills enable me to write efficient and optimized code for problem-solving and software development.
+      </p>
+      <h1 className="font-extrabold text-4xl text-green-400">Known Languages</h1>
+      <div className="my-5 flex flex-wrap justify-center gap-4 w-full  p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center w-[30%] lg:w-[15%] p-2 bg-zinc-50 rounded-lg"
+          >
+            <p className="font-semibold text-lg text-black">{skill.name}</p>
+          </div>
+        ))}
+      </div>
 
       <div
         ref={containerRef}
@@ -73,7 +85,7 @@ const Skills = () => {
             <div
               key={index}
               className="flex flex-col items-center justify-center mx-6 px-5 cursor-pointer text-center bg-zinc-50 rounded-lg"
-              style={{ minWidth: '100px',minHeight:'100px' }}
+              style={{ minWidth: '100px', minHeight: '100px' }}
             >
               <div className="text-center">{skill.logo}</div>
               <p className="mt-2 font-medium">{skill.name}</p>

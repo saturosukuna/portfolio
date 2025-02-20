@@ -35,6 +35,11 @@ const Projects = () => {
         This application eliminates dependency on external networks, making file sharing efficient and secure within a localized environment.
       `,
     },
+    {
+      title: 'Flutter Chatbot app with Gemini Ai API',
+      description: `
+        It will get inputs through text and voice, And get the response using gemini api, but it will more likely answer like a english tutor. And the response will read aloud by a flutter tts and the users voice actually capured by speach to text module in flutter.`,
+    },
   ];
 
   return (
@@ -52,6 +57,13 @@ const Projects = () => {
         ))}
       </div>
       <div class="flex flex-col items-center space-y-6 p-6 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-lg">
+      <a
+          href="/portfolio/images/voicebot.apk"  // Path to your resume in the public folder
+          download="voicebot.apk"
+          className="mt-6 bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition-colors duration-300 inline-block"
+        >
+          Download voicebot App
+        </a>
   
   <div className="w-full  p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
     <h2 className="text-xl py-4 font-semibold text-gray-800 dark:text-gray-200 text-center">Flowchart For My Blockchain Project</h2>
