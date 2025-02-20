@@ -63,11 +63,11 @@ const Skills = () => {
         I have expertise in the MERN stack, blockchain development, and logical programming. With a strong foundation in MongoDB, Express, React, and Node.js, I build scalable web applications. My blockchain knowledge includes smart contract development using Solidity and Web3. My logical thinking skills enable me to write efficient and optimized code for problem-solving and software development.
       </p>
       <h1 className="font-extrabold text-4xl text-green-400">Known Languages</h1>
-      <div className="my-5 flex flex-wrap justify-center gap-4 w-full  p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+      <div className="my-5 flex flex-wrap justify-center gap-4 w-full  p-4 bg-white  rounded-lg shadow-md">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center w-[30%] lg:w-[15%] p-2 bg-zinc-50 rounded-lg"
+            className="flex flex-col items-center justify-center w-[30%] lg:w-[15%] p-4 bg-zinc-50 rounded-lg"
           >
             <p className="font-semibold text-lg text-black">{skill.name}</p>
           </div>

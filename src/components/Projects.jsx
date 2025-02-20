@@ -56,7 +56,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <div class="flex flex-col items-center space-y-6 p-6 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-lg">
+      <div class="flex flex-col items-center space-y-6 p-6 bg-gray-100  rounded-lg shadow-lg">
       <a
           href="/portfolio/images/voicebot.apk"  // Path to your resume in the public folder
           download="voicebot.apk"
