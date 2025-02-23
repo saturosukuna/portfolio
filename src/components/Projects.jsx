@@ -40,6 +40,11 @@ const Projects = () => {
       description: `
         It will get inputs through text and voice, And get the response using gemini api, but it will more likely answer like a english tutor. And the response will read aloud by a flutter tts and the users voice actually capured by speach to text module in flutter.`,
     },
+    {
+      title: "Rajify music app with React",
+      description: `Rajify lets you explore and stream music effortlessly by fetching random songs from YouTube. Search for any track, create playlists, and enjoy a seamless audio experience with a sleek, Spotify-like UI. No downloads—just pure music streaming! using Youtube Api data v3, I managed to create this application,check out:[https://saturosukuna.github.io/Rajify]`,
+    },
+    
   ];
 
   return (
@@ -63,6 +68,12 @@ const Projects = () => {
           className="mt-6 bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition-colors duration-300 inline-block"
         >
           Download voicebot App
+        </a>
+        <a
+          href="https://saturosukuna.github.io/Rajify"  // Path to your resume in the public folder
+          className="mt-6 bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition-colors duration-300 inline-block"
+        >
+          Go to Rajify
         </a>
   
   <div className="w-full  p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
