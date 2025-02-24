@@ -23,6 +23,7 @@ const Hero = () => {
     alt="Avatar"
     className="w-[300px] h-[300px] mt-28 rounded-full border-4 border-white  md:mt-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2 transition-all duration-300"
   />
+ 
   <h1 className="text-4xl text-center font-extrabold md:mt-[400px] text-white z-10 mt-4">Rajesh Ravi</h1>
 </div>
 

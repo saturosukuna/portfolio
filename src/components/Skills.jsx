@@ -78,13 +78,13 @@ const Skills = () => {
         {skills.map((skill, index) => (
          <div
          key={index}
-         className="flex flex-col items-center  w-[100px] md:w-[200px] justify-center p-2 bg-white-900 rounded 
-                    shadow-lg shadow-blue-500/50 ring-2 ring-white-400 
-                    hover:shadow-green-500 hover:ring-blue-500 hover:scale-105 
+         className="flex flex-col items-center  w-[100px] md:w-[200px] justify-center p-2 rounded 
+                    shadow-lg shadow-blue-500/50 ring-2 ring-white-400 bg-black text-white
+                    hover:shadow-green-500 hover:ring-blue-500 hover:bg-white hover:text-gray-900   
                     transition-all duration-300 "
        >
        
-            <p className="font-semibold text-lg text-white">{skill.name}</p>
+            <p className="font-semibold text-lg">{skill.name}</p>
           </div>
         ))}
       </div>
@@ -99,7 +99,7 @@ const Skills = () => {
           {[...skills, ...skills].map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center mx-6 px-5 cursor-pointer text-center bg-zinc-50 rounded-lg"
+              className="flex flex-col items-center justify-center mx-6 px-5 cursor-pointer text-center bg-zinc-50 rounded-lg  hover:bg-gray-800 hover:text-white duration-300"
               style={{ minWidth: '100px', minHeight: '100px' }}
             >
               <div className="text-center">{skill.logo}</div>

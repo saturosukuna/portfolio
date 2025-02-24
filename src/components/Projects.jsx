@@ -62,44 +62,74 @@ const Projects = () => {
       <h2 className="text-3xl font-extrabold text-green-600 text-center mb-8">Projects</h2>
       <div  className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
-          <div
-          data-aos="zoom-in"
-          data-aos-anchor-placement="center-bottom"
-            key={index}
-            className="bg-white p-6 rounded-lg text-indigo-800 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:bg-blue-600 hover:text-white "
-          >
+          <div  data-aos="zoom-in"
+          data-aos-anchor-placement="center-bottom">
+          <div 
+          key={index}
+          className="bg-white p-6 rounded-lg text-indigo-800 shadow-lg hover:shadow-xl 
+                     transition-all duration-300 
+                     hover:scale-90 hover:bg-blue-600 hover:text-white hover:rotate-[1deg]"
+        >
+        
             <h3 className="text-xl font-bold text-gray-800 mb-4">{project.title}</h3>
             <p className="text-justify  leading-relaxed">{project.description}</p>
+          </div>
           </div>
         ))}
       </div>
       <div class="flex flex-col items-center space-y-6 p-6 bg-gray-100  rounded-lg shadow-lg">
-      <a
-      data-aos="flip-right"
-          href="/portfolio/images/voicebot.apk"  // Path to your resume in the public folder
-          download="voicebot.apk"
-          className="mt-6 text-white flex flex-col items-center justify-center p-2 bg-indigo-600 rounded 
-                    shadow-lg shadow-blue-500/50 ring-2 ring-blue-400 
-                    hover:shadow-red-500 hover:ring-blue-500 hover:scale-105 
-                    transition-all duration-300"
-        >
-          Download voicebot App
-        </a>
-        <a
-          data-aos="flip-left"
+     
+        
+  
+  <div data-aos="zoom-in" className="w-full  p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+    <h2 className="text-xl py-4 font-semibold text-gray-800 dark:text-gray-200 text-center">Flowchart For My Blockchain Project</h2>
+    <img src="/portfolio/images/uml.png" alt="Flowchart" className="w-full rounded-lg shadow-md border border-gray-300 dark:border-gray-700"/>
+  </div>
+  <div data-aos="zoom-in" className="w-full  p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+    <h2 className="text-xl py-4 font-semibold text-gray-800 dark:text-gray-200 text-center">Rajify Website</h2>
+    <img src="/portfolio/images/Rajify.png" alt="Flowchart" className="w-full rounded-lg shadow-md border border-gray-300 dark:border-gray-700"/>
+    <a
           href="https://saturosukuna.github.io/Rajify"  // Path to your resume in the public folder
-          className="mt-6 text-white flex flex-col items-center justify-center p-2 bg-indigo-600 rounded 
+          className="mt-6 mx-5 text-white flex flex-col items-center justify-center p-2 bg-indigo-600 rounded 
                     shadow-lg shadow-blue-500/50 ring-2 ring-blue-400 
                     hover:shadow-pink-500 hover:ring-blue-500 hover:scale-105 
                     transition-all duration-300"
         >
           Go to Rajify
         </a>
-  
-  <div className="w-full  p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-    <h2 className="text-xl py-4 font-semibold text-gray-800 dark:text-gray-200 text-center">Flowchart For My Blockchain Project</h2>
-    <img src="/portfolio/images/uml.png" alt="Flowchart" className="w-full rounded-lg shadow-md border border-gray-300 dark:border-gray-700"/>
   </div>
+
+  <div data-aos="zoom-in" className="w-full flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+    <h2 className="text-xl py-4 font-semibold text-gray-800 dark:text-gray-200 text-center">
+        Voicebot App with Audio
+    </h2>
+
+    {/* Mobile Frame */}
+    <div className="relative p-2 bg-gray-900 rounded-2xl border-4 border-gray-700 shadow-lg w-[230px]">
+        {/* Notch */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-3 bg-black rounded-b-lg"></div>
+        
+        {/* Screenshot */}
+        <img 
+            src="/portfolio/images/voicebot.jpg" 
+            alt="Voicebot App" 
+            className="w-full rounded-lg shadow-md border border-gray-300 dark:border-gray-700"
+        />
+    </div>
+
+    {/* Download Button */}
+    <a
+        href="/portfolio/images/voicebot.apk"
+        download="voicebot.apk"
+        className="mt-6 text-white flex items-center justify-center px-4 py-2 bg-indigo-600 rounded-lg 
+                   shadow-lg shadow-blue-500/50 ring-2 ring-blue-400 
+                   hover:shadow-red-500 hover:ring-blue-500 hover:scale-105 
+                   transition-all duration-300"
+    >
+        📥 Download Voicebot App
+    </a>
+</div>
+
 
 </div>
 
