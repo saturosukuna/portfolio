@@ -1,7 +1,17 @@
 // src/components/Projects.jsx
-import React from 'react';
-
+import React,{useEffect} from 'react';
+import 'aos/dist/aos.css';
 const Projects = () => {
+  useEffect(() => {
+      // Initialize AOS
+      import('aos').then((AOS) => {
+        AOS.init({
+          duration: 1000, // Animation duration
+          once: false, // Whether animation should happen only once - while scrolling down
+          offset: 100, // Offset (in px) from the original trigger point
+        });
+      });
+    }, []);
   const projects = [
     {
       title: 'Decentralized Identity Management System',
@@ -48,30 +58,40 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="scroll-mt-20 p-8 bg-gray-50 rounded-lg shadow-lg">
+    <section data-aos="fade-up" id="projects" className="scroll-mt-20 p-8 bg-gray-50 rounded-lg shadow-lg">
       <h2 className="text-3xl font-extrabold text-green-600 text-center mb-8">Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div  className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
           <div
+          data-aos="zoom-in"
+          data-aos-anchor-placement="center-bottom"
             key={index}
-            className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="bg-white p-6 rounded-lg text-indigo-800 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:bg-blue-600 hover:text-white "
           >
             <h3 className="text-xl font-bold text-gray-800 mb-4">{project.title}</h3>
-            <p className="text-justify text-indigo-800 leading-relaxed">{project.description}</p>
+            <p className="text-justify  leading-relaxed">{project.description}</p>
           </div>
         ))}
       </div>
       <div class="flex flex-col items-center space-y-6 p-6 bg-gray-100  rounded-lg shadow-lg">
       <a
+      data-aos="flip-right"
           href="/portfolio/images/voicebot.apk"  // Path to your resume in the public folder
           download="voicebot.apk"
-          className="mt-6 bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition-colors duration-300 inline-block"
+          className="mt-6 text-white flex flex-col items-center justify-center p-2 bg-indigo-600 rounded 
+                    shadow-lg shadow-blue-500/50 ring-2 ring-blue-400 
+                    hover:shadow-red-500 hover:ring-blue-500 hover:scale-105 
+                    transition-all duration-300"
         >
           Download voicebot App
         </a>
         <a
+          data-aos="flip-left"
           href="https://saturosukuna.github.io/Rajify"  // Path to your resume in the public folder
-          className="mt-6 bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition-colors duration-300 inline-block"
+          className="mt-6 text-white flex flex-col items-center justify-center p-2 bg-indigo-600 rounded 
+                    shadow-lg shadow-blue-500/50 ring-2 ring-blue-400 
+                    hover:shadow-pink-500 hover:ring-blue-500 hover:scale-105 
+                    transition-all duration-300"
         >
           Go to Rajify
         </a>
@@ -90,3 +110,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
+

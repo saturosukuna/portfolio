@@ -1,8 +1,19 @@
 import React, { useRef, useEffect } from 'react';
 import { FaJsSquare, FaNodeJs, FaHtml5, FaCss3Alt, FaJava, FaDocker } from 'react-icons/fa';  // Import logos from react-icons
 import { SiTailwindcss, SiMongodb, SiExpress, SiEthereum, SiBootstrap, SiFigma, SiMysql, SiOracle } from 'react-icons/si'; // More logos
-
+import 'aos/dist/aos.css';
 const Skills = () => {
+
+   useEffect(() => {
+        // Initialize AOS
+        import('aos').then((AOS) => {
+          AOS.init({
+            duration: 1000, // Animation duration
+            once: false, // Whether animation should happen only once - while scrolling down
+            offset: 100, // Offset (in px) from the original trigger point
+          });
+        });
+      }, []);
   const skills = [
     { name: 'JavaScript', logo: <FaJsSquare className="text-4xl text-yellow-500" /> },
     { name: 'React', logo: <iconify-icon icon="logos:react" width="32" height="32" noobserver></iconify-icon> },
@@ -57,19 +68,23 @@ const Skills = () => {
   }, []);
 
   return (
-    <section id="skills" className="scroll-mt-20 mt-4 p-10 bg-indigo-800 ">
+    <section data-aos="fade-up" id="skills" className="scroll-mt-20 mt-4 p-10 bg-indigo-800 ">
       <h2 className="text-3xl text-white font-serif font-extrabold text-center mb-6">Skills</h2>
       <p class="text-lg text-white py-2 dark:text-gray-300 font-medium leading-relaxed">
         I have expertise in the MERN stack, blockchain development, and logical programming. With a strong foundation in MongoDB, Express, React, and Node.js, I build scalable web applications. My blockchain knowledge includes smart contract development using Solidity and Web3. My logical thinking skills enable me to write efficient and optimized code for problem-solving and software development.
       </p>
-      <h1 className="font-extrabold text-4xl text-green-400">Known Languages</h1>
-      <div className="my-5 flex flex-wrap justify-center gap-4 w-full  p-4 bg-white  rounded-lg shadow-md">
+      <h1 className="font-extrabold text-4xl  text-green-400">Known Languages</h1>
+      <div data-aos="zoom-in" data-aos-anchor-placement="top-bottom" className="my-5 flex flex-wrap justify-center gap-4 w-full  p-4 bg-blue-00  rounded-lg shadow-md">
         {skills.map((skill, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center justify-center w-[30%] lg:w-[15%] p-4 bg-zinc-50 rounded-lg"
-          >
-            <p className="font-semibold text-lg text-black">{skill.name}</p>
+         <div
+         key={index}
+         className="flex flex-col items-center  w-[100px] md:w-[200px] justify-center p-2 bg-white-900 rounded 
+                    shadow-lg shadow-blue-500/50 ring-2 ring-white-400 
+                    hover:shadow-green-500 hover:ring-blue-500 hover:scale-105 
+                    transition-all duration-300 "
+       >
+       
+            <p className="font-semibold text-lg text-white">{skill.name}</p>
           </div>
         ))}
       </div>

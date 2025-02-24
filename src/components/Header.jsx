@@ -40,7 +40,7 @@ const Header = () => {
 
         {/* Mobile Navigation Button */}
         <button
-          className="md:hidden p-3 text-white bg-transparent border-2 border-white rounded-full focus:outline-none hover:bg-white hover:text-blue-600 transition-all duration-300"
+          className="md:hidden p-3 text-white bg-transparent rounded  focus:outline-none hover:bg-white hover:text-blue-600 transition-all duration-300"
           onClick={toggleMenu}
         >
           {menuOpen ? (
@@ -76,7 +76,7 @@ const Header = () => {
             key={index}
             href={link}
             onClick={() => handleLinkClick(link)}
-            className={`block text-lg px-6 py-3 text-gray-800 hover:bg-gray-200 transition-colors duration-300 ${
+            className={`block text-lg text-center px-6 py-1 text-gray-800 hover:bg-gray-200 transition-colors duration-300 ${
               activeLink === link ? "underline font-semibold text-blue-600" : ""
             }`}
           >

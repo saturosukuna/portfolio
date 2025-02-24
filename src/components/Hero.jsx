@@ -1,10 +1,20 @@
 // src/components/Hero.jsx
-import React from 'react';
-
+import React,{useEffect} from 'react';
+import 'aos/dist/aos.css';
 
 const Hero = () => {
+  useEffect(() => {
+        // Initialize AOS
+        import('aos').then((AOS) => {
+          AOS.init({
+            duration: 1000, // Animation duration
+            once: false, // Whether animation should happen only once - while scrolling down
+            offset: 100, // Offset (in px) from the original trigger point
+          });
+        });
+      }, []);
   return (
-    <section className="h-[100vh] flex flex-col md:flex-row">
+    <section data-aos="fade-down" data-aos-anchor-placement="top-bottom" className="h-[100vh] flex flex-col md:flex-row">
       {/* First Section: Avatar and Name */}
       <div className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white text-center md:w-1/3 p-10 flex flex-col items-center justify-center relative">
   
@@ -26,6 +36,7 @@ const Hero = () => {
           I am Rajesh, a passionate developer working towards mastering technologies. This is where I showcase my work, projects, and skills.
         </p>
         <a
+        data-aos="flip-up"
           href="/portfolio/images/resume.pdf"  // Path to your resume in the public folder
           download="resume.pdf"
           className="mt-6 bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition-colors duration-300 inline-block"
