@@ -24,7 +24,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 text-white text-lg">
-          {["#about", "#skills", "#projects", "#contact"].map((link, index) => (
+          {["#about", "#skills", "#projects", "#contact","#others"].map((link, index) => (
             <a
               key={index}
               href={link}
@@ -71,7 +71,7 @@ const Header = () => {
       <div
         className={`md:hidden mt-4 space-y-4 ${menuOpen ? "block" : "hidden"} transition-all duration-300 ease-in-out transform bg-white rounded-lg shadow-lg`}
       >
-        {["#about", "#skills", "#projects", "#contact"].map((link, index) => (
+        {["#about", "#skills", "#projects", "#contact","#others"].map((link, index) => (
           <a
             key={index}
             href={link}

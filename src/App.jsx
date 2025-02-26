@@ -7,7 +7,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Address from './components/Address';
-
+import Others from './components/others';
 
 const App = () => {
   return (
@@ -19,7 +19,9 @@ const App = () => {
         <Skills />
         <Projects />
         <Contact />
+        <Others />
         <Address />
+        
       </main>
     </div>
   );

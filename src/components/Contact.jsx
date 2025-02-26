@@ -44,7 +44,7 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="w-full scroll-mt-20 px-6 py-10 bg-gradient-to-r from-gray-700 to-gray-700 text-white rounded shadow-2xl">
+    <section id="contact" className="w-full scroll-mt-20 px-6 py-10 bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded shadow-2xl">
   <div className="max-w-lg mx-auto bg-white/10 backdrop-blur-lg p-8 rounded-xl shadow-lg">
     <h2 className="text-3xl font-extrabold text-white text-center mb-6">Contact Me</h2>
     
