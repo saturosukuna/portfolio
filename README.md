@@ -34,7 +34,7 @@
 
 <h2>📧 Contact Me</h2>
 <p>
-  Feel free to reach out through the contact form on the website or email me directly at <code>your@email.com</code>.
+  Feel free to reach out through the contact form on the website or email me directly at <code>rajeshravi67796@gmail.com</code>.
 </p>
 
 <h2>💙 Acknowledgements</h2>
