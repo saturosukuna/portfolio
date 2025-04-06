@@ -27,23 +27,10 @@
 
 <h2>🔗 Live Preview</h2>
 <p>
-  <a href="https://yourusername.github.io/your-portfolio-repo/" target="_blank">🌐 View My Portfolio</a>
+  <a href="https://saturosukuna.github.io/portfolio/" target="_blank">🌐 View My Portfolio</a>
 </p>
 
-<h2>📥 Setup Instructions</h2>
-<ol>
-  <li>Clone the repository</li>
-  <pre><code>git clone https://github.com/yourusername/your-portfolio-repo.git</code></pre>
 
-  <li>Navigate to the project directory</li>
-  <pre><code>cd your-portfolio-repo</code></pre>
-
-  <li>Install dependencies</li>
-  <pre><code>npm install</code></pre>
-
-  <li>Start the development server</li>
-  <pre><code>npm run dev</code></pre>
-</ol>
 
 <h2>📧 Contact Me</h2>
 <p>
